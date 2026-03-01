@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="{{url_for('static', filename='/css/style2.css')}}">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Головна</title>
+</head>
+<body link="black" alink="black" vlink="black">
+    <header>
+        <div class="head_button_div">
+            <a href="/login"><button class="head_button">Увійти</button></a>
+            <a href="/register"><button class="head_button">Зареєструватися</button></a>
+        </div>
+    </header>
+    <main>
+        <section>
+            <h1>Онлайн тур</h1>
+            <h2 class="name">Онлайн тур на цьому сайті реалізований таким чином:</h2>
+            <p class="name">Ви нище вибираєте місце куди хочете подорожувати, і там зібрана вся інформація та фото. Ще також можна буде побачити вулиці тих міст та походити по ним.</p>
+        </section>
+        <section class="q">
+            <a href="/paris" class="white">
+                <button class="nav_button">Париж, Франція</button>
+            </a>
+            <a href="/rome" class="white">
+                <button class="nav_button">Рим, Італія</button>
+            </a>
+            <a href="/tokio" class="white">
+                <button class="nav_button">Токіо, Японія</button>
+            </a>
+            <a href="/london" class="white">
+                <button class="nav_button">Лондон, Велика Британія</button>
+            </a>
+            <a href="/dybai" class="white">
+                <button class="nav_button">Дубай, ОАЕ</button>
+            </a>
+            <a href="/new-york" class="white">
+                <button class="nav_button">Нью-Йорк, США</button>
+            </a>
+            <a href="/kyiv" class="white">
+                <button class="nav_button">Київ, Україна</button>
+            </a>
+        </section>
+        <section>
+            {% if 'user' in session %}
+                <h2>Профіль</h2>
+                <p>Вітаємо, {{ user }} </p>
+                <a href="/board"><button class="button">Дошка оголошень</button></a><br>
+                <a href="/edit_profile"><button class="button">Редагувати профіль</button></a><br>
+                <a href="/logout"><button class="button">Вийти</button></a><br>
+                <a href="/delete"><button class="button">Видалити акаунт</button></a>
+            {% else %}
+                <a href="/login"><button class="button">Увійти</button></a>
+                <a href="/register"><button class="button">Зареєструватися</button></a>
+            {% endif %}
+        </section>
+    </main>
+    <footer>
+        <p><a href="#">Головна | </a><a href="/location">Локація</a></p>
+
+    </footer>
+</body>
+</html>

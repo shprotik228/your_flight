@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="{{url_for('static', filename='/css/delete_account.css')}}">
+    <meta charset="UTF-8">
+    <title>Видалити акаунт</title>
+</head>
+<body>
+    <main>
+        <h2>Видалити акаунт</h2>
+        <a href="/main"><button>На головну</button></a><br><br>
+        <form method="POST">
+            <input name="password" type="password" placeholder="Пароль"><br><br>
+            <input name="password2" type="password" placeholder="Повторіть пароль"><br><br>
+            <button>Видалити акаунт</button>
+        </form>
+    </main>
+    <footer>
+        <p><a href="/main">Головна | </a><a href="/location">Локація</a></p>
+
+    </footer>
+</body>
+</html>

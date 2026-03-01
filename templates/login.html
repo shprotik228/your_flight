@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="{{url_for('static', filename='css/register.css')}}">
+    <meta charset="UTF-8">
+    <title>Увійти</title>
+</head>
+<body>
+    <main>
+        <h2>Логін</h2>
+        <form method="POST">
+            <input name="username" placeholder="Логін"><br><br>
+            <input name="password" type="password" placeholder="Пароль"><br><br>
+            <button>Увійти</button>
+        </form>
+        <button><a href="/register">Ще немає акаунта?</a></button>
+    </main>
+    <footer>
+        <p><a href="/main">Головна | </a><a href="/location">Локація</a></p>
+
+    </footer>
+</body>
+</html>

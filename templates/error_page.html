@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="{{url_for('static', filename='/css/error_page.css')}}">
+    <meta charset="UTF-8">
+    <title>Error</title>
+</head>
+<body>
+    <main>
+        <section>
+            <h1>an error occurred</h1>
+            <a href="/main"><button>На головну</button></a>
+        </section>
+        <section>
+            <p>{{ error }}</p>
+        </section>
+    </main>
+    <footer>
+        <p><a href="/main">Головна | </a><a href="/location">Локація</a></p>
+
+    </footer>
+</body>
+</html>

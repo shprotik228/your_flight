@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="{{url_for('static', filename='css/register.css')}}">
+    <meta charset="UTF-8">
+    <title>Реєстрація</title>
+</head>
+<body alink="white" vlink="white" link="white">
+    <main>
+        <h2>Реєстрація</h2>
+        <form method="POST">
+            <input name="username" placeholder="Логін"><br><br>
+            <input name="password" type="password" placeholder="Пароль"><br><br>
+            <input name="password2" type="password" placeholder="Повторіть пароль"><br><br>
+            <button>Зареєструватись</button>
+        </form>
+        <a href="/login"><button>Вже є акаунт?</button></a>
+    </main>
+    <footer>
+        <p><a href="/main">Головна | </a><a href="/location">Локація</a></p>
+
+    </footer>
+</body>
+</html>

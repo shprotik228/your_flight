@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="{{url_for('static', filename='css/edit_profile.css')}}">
+    <meta charset="UTF-8">
+    <title>Редагування профілю</title>
+</head>
+<body>
+    <main>
+        <section><h2>Редагування профілю</h2>
+            <a href="/main"><button>На головну</button></a>
+        </section>
+        <section>
+            <form method="post">
+                <div>
+                    <label>Нове ім'я: </label>
+                    <input name="username", value="{{user}}">
+                </div>
+                <div>
+                    <label>Новий пароль: </label>
+                <input name="password", type="password">
+                </div>
+            <br><button>Зберегти змінні</button>
+            </form>
+        </section>
+
+    </main>
+    <footer>
+        <p><a href="/main">Головна | </a><a href="/location">Локація</a></p>
+
+    </footer>
+</body>
+</html>
